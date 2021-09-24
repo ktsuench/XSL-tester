@@ -39,11 +39,17 @@ Requires Docker and Docker Compose.
 
 Docker setup adapted from https://bitbucket.org/fvdmerwe/xsl-transform
 
-Run `make dock-build compose-up` to run tasks from Makefile to start up app.
+Run `make dock-load compose-up` to run tasks from Makefile to start up app.
 
 If you don't have [Make](https://www.gnu.org/software/make/) installed, run the commands directly:
-- `DOCKER_BUILDKIT=1 docker build --compress --target deploy -t xtd/xsl-tester`
+- `docker load -i xsl-tester.tar.gz`
 - `docker-compose up -d`
+
+#### Build image
+
+If you want to make changes to the app and build:
+- using Make, run `make dock-build`
+- or run directly `DOCKER_BUILDKIT=1 docker build --compress --target deploy -t xtd/xsl-tester`
 
 ## Changelog
 ====================

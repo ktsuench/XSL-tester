@@ -1,0 +1,12 @@
+.git
+.settings
+.tool-versions
+.gitignore
+Dockerfile
+docker-compose.yml
+Makefile
+project/project/
+project/target/
+target/
+README
+LICENSE.md

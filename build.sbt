@@ -1,4 +1,4 @@
-name := "test"
+name := "xml-tester"
 
 version := "1.2.4"
 
@@ -16,3 +16,7 @@ libraryDependencies ++= Seq(
 )
 
 play.Project.playJavaSettings
+
+sources in (Compile, doc) := Seq.empty
+
+publishArtifact in (Compile, packageDoc) := false

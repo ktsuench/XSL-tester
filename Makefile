@@ -8,6 +8,9 @@ sbt-shell:
 ## Docker tasks ##
 dock-build:
 	DOCKER_BUILDKIT=1 docker build --compress --target deploy -t xtd/xsl-tester .
+dock-load:
+	cat docker-image-tar/* xsl-tester.tar.gz
+	docker load -i xsl-tester.tar.gz
 dock-rmi:
 	docker rmi xtd/xsl-tester
 

@@ -22,6 +22,8 @@ After set up, access at http://localhost:9000.
 
 Suggested method is to run it using Docker, self contained set up.
 
+If you need it on a subpath (i.e. "http://&lt;your-domain>.&lt;tld>/&lt;subpath>" -> http://mydomain.tld/xsl-tester), edit the `application.context` value in `conf/application.conf` file.
+
 ### Locally
 
 Requires having [sbt](https://www.scala-sbt.org/) installed and having a MySQL db set up.

@@ -136,9 +136,9 @@ $("#save").click ->
     data: $("#files").serialize()
     success: (data) ->
       if data[1] == "0"
-        window.history.pushState("", "XSL Transform", "/" + data[0]);
+        window.history.pushState("", "XSL Transform", appContext + "/" + data[0]);
       else
-        window.history.pushState("", "XSL Transform", "/" + data[0] + "/" + data[1]);
+        window.history.pushState("", "XSL Transform", appContext + "/" + data[0] + "/" + data[1]);
       $("#id_slug").val(data[0]);
       $("#save").find("span").html("Update");
     error: (err) ->
@@ -183,7 +183,7 @@ reset = ->
       xsleditor.getSession().setValue data
       $("#xsl").val(data)
   );
-  window.history.pushState("", "XSL Transform", "/");
+  window.history.pushState("", "XSL Transform", appContext || "/");
 
 $ ->
   if id != ""

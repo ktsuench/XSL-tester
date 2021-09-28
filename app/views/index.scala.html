@@ -1,11 +1,13 @@
 @(id: String = "", revision:Int = 0, engine:String = "Saxon9")
 @import collection.convert.WrapAsJava
+@import play.api.Play.current
 
 @main("XSL Transform") {
     <script>
             var id = "@id";
             var revision = "@revision";
             var engine = "@engine";
+            var appContext = '@play.api.Play.configuration.getString("application.context").getOrElse("")';
     </script>
 
     <div class="inner">
